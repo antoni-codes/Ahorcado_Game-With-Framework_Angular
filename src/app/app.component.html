@@ -2,10 +2,11 @@
 
 <div class="row" >
   <div class="col text-center ">
-    <img src="assets/img/9.png" alt="Base-piso" class="img-ahorcado">
+                          <!-- INTERPOLATION of Strings - int-->
+    <img src="assets/img/{{ intentos }}.png" alt="Base-piso" class="img-ahorcado">
     <h3> Intentos </h3>
-    <h6>3 de 9</h6>
-  </div>
+    <h6>{{ intentos }} de 9</h6>
+  </div>  
 </div>
 
 <div class="row">
@@ -14,7 +15,21 @@
   </div>
 </div>
 
-<section class="container">
+<!-- WIN -->
+            <!-- DIRECTIVE *ngIf="" -->
+<div class="row" *ngIf="gano">
+  <div class="col text-center">
+    <h1>Felicidades ¡GANASTE!</h1>
+  </div>
+</div>
+<!-- LOSE -->
+<div class="row" *ngIf="perdio">
+  <div class="col text-center">
+    <h1>Lo siento, PERDISTE</h1>
+  </div>
+</div>
+
+<section class="container" *ngIf="!gano && !perdio">
   <div class="row">
     <div class="col text-center group-btn">
       <!-- Event CLICK -->
