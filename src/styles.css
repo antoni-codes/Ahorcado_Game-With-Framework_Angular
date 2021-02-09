@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+
+
+.img-ahorcado{
+    height: 70%;
+}
+
+.group-btn{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.group-btn button{
+    flex-wrap: wrap;
+    margin: .4rem;
+}
